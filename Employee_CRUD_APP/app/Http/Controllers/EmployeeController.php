@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use App\Models\Employee;
+use App\Models\Employee;
 use App\DataTables\EmployeeDataTable;
+// use App\DataTables\EmployeeDataTable;
+// use Yajra\DataTables\Faccades\DataTables;
 
 class EmployeeController extends Controller
 {
@@ -12,6 +14,24 @@ class EmployeeController extends Controller
     public function index(EmployeeDataTable $datatable){
         return $datatable ->render('employee');
     }
+
+     
+
+
+
+    //    public function getAddEditRemoveColumnData()
+    // {
+    //     dd("hi");
+    //     // $users = User::select(['id', 'name', 'email', 'phone', 'salary', 'department','created_at', 'updated_at']);
+
+    //     // return Datatables::of($users)
+    //     //     ->addColumn('action', function ($user) {
+    //     //         return '<a href="#edit-'.$user->id.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
+    //     //     })
+    //     //     ->editColumn('id', 'ID: {{$id}}')
+    //     //     ->removeColumn('password')
+    //     //     ->make(true);
+    // }
     // public function addEmployee(){
        
     //     $employee=[ 
